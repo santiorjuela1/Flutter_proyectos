@@ -32,7 +32,7 @@ class MainApp extends StatelessWidget {
                 ),
                 child: Container(
                   alignment: Alignment.center, // Center-align the content
-                  margin: EdgeInsets.all(20), // Add vertical margin
+                  margin: const EdgeInsets.all(20), // Add vertical margin
                   child: const Column(
                     crossAxisAlignment: CrossAxisAlignment
                         .center, // Center the text horizontally
@@ -92,29 +92,120 @@ class MainApp extends StatelessWidget {
         body: Center(
           child: ListView(
             children: [
-              Container(
-                margin: const EdgeInsets.all(20),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Container(
-                      width: 200,
-                      height: 100,
-                      color: Colors.yellow,
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    margin: const EdgeInsets.all(20),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Container(
+                          width: 200,
+                          height: 100,
+                          color: Colors.yellow,
+                        ),
+                        Container(
+                          width: 200,
+                          height: 100,
+                          color: Colors.blue,
+                        ),
+                        Container(
+                          width: 200,
+                          height: 100,
+                          color: Colors.red,
+                        )
+                      ],
                     ),
-                    Container(
-                      width: 200,
-                      height: 100,
-                      color: Colors.blue,
+                  ),
+                  const Text(
+                    'lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget aliquam ultricies, nisl nisl aliquet nisl, eget aliquam nisl nisl eget. Donec euismod, nisl eget aliquam ultricies, nisl nisl aliquet nisl, eget aliquam nisl nisl eget. Donec euismod, nisl eget aliquam ultricies, nisl nisl aliquet nisl, eget aliquam nisl nisl eget. Donec euismod, nisl eget aliquam ultricies, nisl nisl aliquet nisl, eget aliquam nisl nisl eget. Donec euismod, nisl eget aliquam ultricies, nisl nisl aliquet nisl, eget aliquam nisl nisl eget. Donec euismod, nisl eget aliquam ultricies, nisl nisl aliquet nisl, eget aliquam nisl nisl eget.',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 24,
                     ),
-                    Container(
-                      width: 200,
-                      height: 100,
-                      color: Colors.red,
-                    )
-                  ],
-                ),
-              ),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      IconButton(
+                        icon: const Icon(Icons.access_time),
+                        onPressed: () {},
+                      ),
+                      IconButton(
+                        icon: const Icon(Icons.key),
+                        onPressed: () {},
+                      ),
+                      IconButton(
+                        icon: const Icon(Icons.camera),
+                        onPressed: () {},
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: <Widget>[
+                      TextButton(
+                        onPressed: () {},
+                        child: const Text(
+                          'Select alarm',
+                          style: TextStyle(
+                            color: Colors.green,
+                            fontSize: 24,
+                          ),
+                        ),
+                      ),
+                      ElevatedButton(
+                        onPressed: () {},
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all(
+                              const Color.fromARGB(255, 172, 236, 174)),
+                        ),
+                        child: const Text(
+                          'Select key',
+                          style: TextStyle(
+                            color: Colors.green,
+                          ),
+                        ),
+                      ),
+                      OutlinedButton(
+                        onPressed: () {},
+                        child: const Text('Select camera',
+                            style: TextStyle(
+                              color: Colors.green,
+                            )),
+                      ),
+                    ],
+                  ),
+                  const ListTile(
+                    title: Text('Element #0'),
+                  ),
+                  const ListTile(
+                    title: Text('Element #1'),
+                  ),
+                  const ListTile(
+                    title: Text('Element #2'),
+                  ),
+                  const ListTile(
+                    title: Text('Element #3'),
+                  ),
+                  const Text(
+                      'lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget aliquam ultricies, nisl nisl aliquet nisl, eget aliquam nisl nisl eget. Donec euismod, nisl eget aliquam ultricies, nisl nisl aliquet nisl, eget aliquam nisl nisl eget. Donec euismod, nisl eget aliquam ultricies, nisl nisl aliquet nisl, eget aliquam nisl nisl eget. Donec euismod, nisl eget aliquam ultricies, nisl nisl aliquet nisl, eget aliquam nisl nisl eget. Donec euismod, nisl eget aliquam ultricies, nisl nisl aliquet nisl, eget aliquam nisl nisl eget.',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 24,
+                      )),
+                  const Text(
+                    'END OF APLICATION',
+                    style: TextStyle(
+                      color: Colors.green,
+                      fontSize: 30,
+                    ),
+                  ),
+                ],
+              )
             ],
           ),
         ),
