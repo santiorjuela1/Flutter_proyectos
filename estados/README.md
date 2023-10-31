@@ -1,3 +1,3 @@
 # estados
 
-A new Flutter project.
+Tarea de estados con flutter. Implementé Consumer en vez de read o watch
