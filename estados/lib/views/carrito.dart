@@ -13,7 +13,7 @@ class Carrito extends StatelessWidget {
       builder: (context, cart, child) {
         return Scaffold(
           appBar: AppBar(
-            title: const Text('Shopping Cart'),
+            title: const Text('Carrito'),
             centerTitle: true,
             leading: IconButton(
               icon: const Icon(Icons.arrow_back),
@@ -22,7 +22,7 @@ class Carrito extends StatelessWidget {
           ),
           body: cart.cartItems.isEmpty
               ? const Center(
-                  child: Text('Your cart is empty'),
+                  child: Text('No hay nada en el carrito!!'),
                 )
               : Column(
                   children: [
